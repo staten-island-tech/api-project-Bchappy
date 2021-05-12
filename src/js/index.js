@@ -5,7 +5,7 @@ const key = "i7NBVLUt7zb2aigI2OkdIsBQjUXIOpJy";
 const query = async function(){
     try{
         const response = await fetch(
-            `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=${key}`
+            `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-nonfiction.json?api-key=${key}`
         );
         const data = await response.json();
         console.log(data.results.books);
@@ -31,7 +31,7 @@ const query = async function(){
               </div>
     
               <div class="movie-genres">
-                <li class="movie-genre">See on Amazon</li>
+                <a href="${book.amazon_product_url}" class="movie-genre">See on Amazon</a>
               </div>
             </div>
           </div>`)

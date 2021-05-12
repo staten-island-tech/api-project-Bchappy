@@ -87,7 +87,7 @@ body {
 
 .movie-genres {
   font-size: 1.6rem;
-  padding: 1rem 2rem;
+  padding: 2rem 1rem 2rem 1rem;
   display: flex;
   width: 100%;
   justify-content: space-around;
@@ -99,6 +99,13 @@ body {
   text-align:center;
   font-size:2rem;
 }
+.movie-genre:hover{
+  transform:scale(2);
+  background:grey;
+  border-radius:3rem;
+  transition-duration:0.3s;
+}
+.movie-genre
 .user-score {
   font-size: 2rem;
 }
