@@ -2,15 +2,17 @@ import { DOMSelectors } from "./DOM";
 import { genres } from "./genre";
 
 const key = "i7NBVLUt7zb2aigI2OkdIsBQjUXIOpJy";
-const query = async function(genre){
-    try{
-        const response = await fetch(
-            `https://api.nytimes.com/svc/books/v3/lists/current/${genre}.json?api-key=${key}`
-        );
-        const data = await response.json();
-        console.log(data.results.books);
-        data.results.books.forEach((book) =>{
-            DOMSelectors.grid.insertAdjacentHTML("beforeend", `<div class="book-card">
+const query = async function (genre) {
+  try {
+    const response = await fetch(
+      `https://api.nytimes.com/svc/books/v3/lists/current/${genre}.json?api-key=${key}`
+    );
+    const data = await response.json();
+    console.log(data.results.books);
+    data.results.books.forEach((book) => {
+      DOMSelectors.grid.insertAdjacentHTML(
+        "beforeend",
+        `<div class="book-card">
             <div class="book-card-front">
               <img
                 src=${book.book_image}
@@ -35,12 +37,22 @@ const query = async function(genre){
               <a href="${book.amazon_product_url}" class="amazon">See on Amazon</a>
             
             </div>
-          </div>`)
-        })
-    }
-    catch (error) {
-        alert("An error occured. Please try again.");
-    }
-}
+          </div>`
+      );
+    });
+  } catch (error) {
+    alert("An error occured. Please try again.");
+  }
+};
 query("picture-books");
 //hardcover-fiction    hardcover-nonfiction   young-adult-hardcover   childrens-middle-grade-hardcover    picture-books
+
+/* const listen = function () {
+  DOMSelectors.searchForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const searchParams = DOMSelectors;.searchArea.value;
+  });
+}; */
+
+const navBar = document.querySelector(".fiction");
+Fiction.addEventListener("click", () => {});
