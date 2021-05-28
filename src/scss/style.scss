@@ -23,15 +23,15 @@ body {
 .top-rated {
   margin: 1rem auto 2rem auto;
   text-align: center;
-  font-size: 3.80rem;
+  font-size: 3.8rem;
 }
-.navbar{
-  width:100%;
-  font-size:3rem;
-  color:black;
-  background:navajowhite;
-  display:flex;
-  justify-content:space-around;
+.navbar {
+  width: 100%;
+  font-size: 3rem;
+  color: black;
+  background: navajowhite;
+  display: flex;
+  justify-content: space-around;
   padding: 1rem 0 1rem 0;
 }
 .movie-grid {
@@ -72,7 +72,7 @@ body {
   top: 0;
   left: 0;
   z-index: 1;
-  font-size:2rem;
+  font-size: 2rem;
   display: none;
   flex-direction: column;
   justify-content: space-around;
@@ -105,23 +105,23 @@ body {
 }
 .amazon {
   list-style: none;
-  text-align:center;
-  font-size:2.5rem;
-  color:white;
-  text-decoration:none;
-  padding:0.5rem;
-  transition-duration:0.3s;
+  text-align: center;
+  font-size: 2.5rem;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+  transition-duration: 0.3s;
 }
-.amazon:hover{
-  transform:scale(1.6);
-  background:grey;
-  border-radius:3rem;
-  transition-duration:0.3s;
+.amazon:hover {
+  transform: scale(1.6);
+  background: grey;
+  border-radius: 3rem;
+  transition-duration: 0.3s;
 }
 
-.amazon:active{
-  transform:scale(1.0);
-  color:blue;
+.amazon:active {
+  transform: scale(1);
+  color: blue;
 }
 .ranking {
   font-size: 2rem;
@@ -132,14 +132,20 @@ body {
 
 .book-card:hover .book-card-front {
   z-index: 1;
-  
 }
 .book-card:hover .book-card-back {
   z-index: 3;
   display: flex;
-  
 }
 .test {
   color: black;
   font-size: 3rem;
+}
+
+#hov:hover {
+  background: #111;
+  border-radius: 1rem;
+  cursor: pointer;
+  color: white;
+  padding: 0.1rem;
 }
