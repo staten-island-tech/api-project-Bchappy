@@ -38,13 +38,46 @@ const query = async function (genre) {
             
             </div>
           </div>`
+          
       );
     });
   } catch (error) {
     alert("An error occured. Please try again.");
   }
 };
-query("picture-books");
+const clear = function(){
+  //document.querySelector(".bookcard")
+  DOMSelectors.grid.innerHTML = ""
+  //   `<div class="book-card">
+  //   <div class="book-card-front">
+  //     <img
+  //       src=""
+  //       alt=""
+  //       class="poster"
+  //     />
+  //   </div>
+  //   <div class="book-card-back">
+  //     <h3 class="book-card-header"></h3>
+  //     <div class="author-box">
+  //       <p class="author"></p>
+  //       <p class="author"></p>
+  //     </div>
+  //     <div class="score-box">
+  //       <p class="ranking">Best Seller Ranking</p>
+  //       <p class="ranking">#</p>
+  //     </div>
+
+      
+
+      
+  //     <a href="" class="amazon">See on Amazon</a>
+    
+  //   </div>
+  // </div>`
+  
+    };
+query("hardcover-nonfiction");
+//query("picture-books");
 //hardcover-fiction    hardcover-nonfiction   young-adult-hardcover   childrens-middle-grade-hardcover    picture-books
 
 /* const listen = function () {
@@ -55,6 +88,18 @@ query("picture-books");
 }; */
 
 const navBar = document.querySelector(".fiction");
-Fiction.addEventListener("click", () => {
+navBar.addEventListener("click", function()  {
+  clear();
   query("hardcover-fiction");
+  
 });
+
+const nonfiction = document.querySelector(".nonfiction")
+nonfiction.addEventListener("click", function(){
+  clear();
+  
+  query("hardcover-nonfiction");
+});
+
+
+//hardcover-fiction    hardcover-nonfiction   young-adult-hardcover   childrens-middle-grade-hardcover    picture-books
