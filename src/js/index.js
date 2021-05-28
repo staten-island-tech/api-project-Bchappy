@@ -55,6 +55,11 @@ query("picture-books");
 }; */
 
 const navBar = document.querySelector(".fiction");
-Fiction.addEventListener("click", () => {
+Fiction.addEventListener("click", function () {
   query("hardcover-fiction");
+});
+
+const navBar2 = document.querySelector(".Non-fiction");
+Fiction.addEventListener("click", function () {
+  query("hardcover-nonfiction");
 });
