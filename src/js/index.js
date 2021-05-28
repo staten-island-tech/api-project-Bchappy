@@ -55,4 +55,6 @@ query("picture-books");
 }; */
 
 const navBar = document.querySelector(".fiction");
-Fiction.addEventListener("click", () => {});
+Fiction.addEventListener("click", () => {
+  query("hardcover-fiction");
+});
