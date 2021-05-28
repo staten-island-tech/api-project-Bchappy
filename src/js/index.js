@@ -38,16 +38,15 @@ const query = async function (genre) {
             
             </div>
           </div>`
-          
       );
     });
   } catch (error) {
     alert("An error occured. Please try again.");
   }
 };
-const clear = function(){
+const clear = function () {
   //document.querySelector(".bookcard")
-  DOMSelectors.grid.innerHTML = ""
+  DOMSelectors.grid.innerHTML = "";
   //   `<div class="book-card">
   //   <div class="book-card-front">
   //     <img
@@ -67,15 +66,11 @@ const clear = function(){
   //       <p class="ranking">#</p>
   //     </div>
 
-      
-
-      
   //     <a href="" class="amazon">See on Amazon</a>
-    
+
   //   </div>
   // </div>`
-  
-    };
+};
 query("hardcover-nonfiction");
 //query("picture-books");
 //hardcover-fiction    hardcover-nonfiction   young-adult-hardcover   childrens-middle-grade-hardcover    picture-books
@@ -87,19 +82,38 @@ query("hardcover-nonfiction");
   });
 }; */
 
-const navBar = document.querySelector(".fiction");
-navBar.addEventListener("click", function()  {
+const fiction = document.querySelector(".fiction");
+fiction.addEventListener("click", function () {
   clear();
   query("hardcover-fiction");
-  
 });
 
-const nonfiction = document.querySelector(".nonfiction")
-nonfiction.addEventListener("click", function(){
+const nonfiction = document.querySelector(".nonfiction");
+nonfiction.addEventListener("click", function () {
   clear();
-  
+
   query("hardcover-nonfiction");
 });
 
+const youngAdult = document.querySelector(".youngadult");
+youngAdult.addEventListener("click", function () {
+  clear();
+
+  query("young-adult-hardcover");
+});
+
+const middleGrade = document.querySelector(".middlegrade");
+middleGrade.addEventListener("click", function () {
+  clear();
+
+  query("young-adult-hardcover");
+});
+
+const pictureBooks = document.querySelector(".picture");
+pictureBooks.addEventListener("click", function () {
+  clear();
+
+  query("picture-books");
+});
 
 //hardcover-fiction    hardcover-nonfiction   young-adult-hardcover   childrens-middle-grade-hardcover    picture-books
