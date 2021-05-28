@@ -106,7 +106,7 @@ const middleGrade = document.querySelector(".middlegrade");
 middleGrade.addEventListener("click", function () {
   clear();
 
-  query("young-adult-hardcover");
+  query("childrens-middle-grade-hardcover");
 });
 
 const pictureBooks = document.querySelector(".picture");
